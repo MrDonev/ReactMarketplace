@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+background-color: rgb(196, 221, 243);
+}
+.listingItem{
+  margin: 0.8em;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1em;
+  width: 82vw;
+  height: 82vh;;
+  background: rgb(79, 79, 79);
+  background: linear-gradient(
+    93deg,
+    rgba(79, 79, 79, 1) 0%,
+    rgba(97, 96, 96, 0.5046393557422969) 34%,
+    rgba(134, 133, 133, 1) 71%,
+    rgba(156, 156, 156, 1) 100%
+  );
+}
+.listingItem > label{
+ margin-left: 12em;;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color:rgb(250, 250, 250);
+}
+.listingItem > input,select{
+  margin:0.1em;
+  margin-left:10em;
+  border-radius: 0.5em;
+  width: 22em;
+  height: 1.5em;
+  font-size: larger;
+}
+.allItemsList {
+  display: grid;
+  grid-row: auto;
+  margin: auto;
+  padding: 0.4em;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: none;
+}
+.itemImage {
+  display: flex;
+  margin:0.6em;
+  width: 13em;
+  height: 13em;
+}
+.itemImage > img {
+  border-radius: 1em;
+}
+.itemCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.itemText {
+  margin: auto;
+  text-align: left;
+}
+.itemText > p {
+  font-family: 'Acme', sans-serif;
+  padding: 0.3em;
+}
+.allItemsList > div {
+  margin:0.2em;
+  border: 2px dotted rgb(148, 148, 148);
+  border-radius: 1em;
+  text-align: center;
+  padding: 0.3em;
+}
+.buttonSection {
+  padding: 0.4em;
+}
+.buttonSection > button {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: aliceblue;
+  background-color: rgb(90, 90, 90);
+  margin: auto;
+  padding: 0.6em;
+  border-radius: 0.6em;
+}
+.buttonSection > button:hover {
+  box-shadow: 0 0.1em 0.5em 0.05em rgb(250, 176, 39);
+}
+.App {
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  grid-template-areas:
+    'Header Header Header Header'
+    'Header Header Header Header'
+    'Nav Main Main Main'
+    'Nav Main Main Main';
+  padding: 0.5rem;
+}
+.Header {
+  grid-area: Header;
+  display: block;
+  width: 99%;
+  height: 13vh;
+  text-align: center;
+  border-radius: 1em;
+  background: rgb(79, 79, 79);
+  background: linear-gradient(
+    93deg,
+    rgba(79, 79, 79, 1) 0%,
+    rgba(97, 96, 96, 0.5046393557422969) 34%,
+    rgba(134, 133, 133, 1) 71%,
+    rgba(156, 156, 156, 1) 100%
+  );
+}
+.Header>h1{
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Acme', sans-serif;
+font-style: oblique;
+}
+#basket{
+ width: 3em;
+ border-radius: 100%;
+ margin-right: 2em;
+}
+#profile{
+  width: 3em;
+  border-radius: 100%;
+}
+#home{
+  width:2.7em;
+  border-radius: 100%;
+  margin-left: 2em;
+}
+#loggedUser{
+ margin-right:5em;
+}
+#avatar{
+  margin-right: 5em;
+  width: 3em;
+  height: 3em;
+  border-radius:80%;
+}
+
+.loading{
+  margin:auto;
+ text-align: center;
+  text-transform: uppercase;
+ background-image: linear-gradient(
+   -225deg,
+   #4621ce 0%,
+   #2a459c 29%,
+   #858585 67%,
+   #dddddd 100%
+ );
+ background-size: auto auto;
+ background-clip: border-box;
+ background-size: 200% auto;
+ color: #fff;
+ background-clip: text;
+ text-fill-color: transparent;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ animation: textclip 2s linear infinite;
+ display: inline-block;
+  font-size: 3em;
+}
+
+@keyframes textclip {
+ to {
+   background-position: 200% center;
+ }
+}
+.Nav {
+  grid-area: Nav;
+  width: 15.5vw;
+  height: 83vh;
+  margin-top:0.5em;
+  display: block;
+  background: rgb(79, 79, 79);
+  background: linear-gradient(
+    180deg,
+    rgba(79, 79, 79, 1) 0%,
+    rgba(97, 96, 96, 0.5046393557422969) 34%,
+    rgba(134, 133, 133, 1) 71%,
+    rgba(156, 156, 156, 1) 100%
+  );
+  border-radius: 1em;
+  text-align: center;
+}
+.Nav > h3 {
+  color: rgb(211, 211, 210);
+  font-size: 1.3rem;
+  margin: auto;
+  padding: 0.9em;
+  text-align: center;
+}
+.Main {
+  width: 82vw;
+  margin-top: 0.5em;
+  grid-area: Main;
+  border-radius: 1em;
+  background: rgb(79, 79, 79);
+  background: linear-gradient(
+    180deg,
+    rgba(79, 79, 79, 1) 0%,
+    rgba(97, 96, 96, 0.5046393557422969) 34%,
+    rgba(134, 133, 133, 1) 71%,
+    rgba(156, 156, 156, 1) 100%
+  );
+}
+.Basket{
+  margin:0.7em;
+  border:1px solid grey;
+  border-radius: 2em;
+  width: 82vw;
+  height: 82vh;
+  border-radius: 1em;
+  background: rgb(79, 79, 79);
+  background: linear-gradient(
+    180deg,
+    rgba(79, 79, 79, 1) 0%,
+    rgba(97, 96, 96, 0.5046393557422969) 34%,
+    rgba(134, 133, 133, 1) 71%,
+    rgba(156, 156, 156, 1) 100%
+  );
+}
+.Basket > p{
+  width: 82vw;
+  margin-top: 0.5em;
+  font-size: larger;
+  font-weight: bolder;
+}
+.categories {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  text-align: left;
+}
+.categories > a:visited {
+  color: rgb(44, 44, 44);
+  padding: 0.2em;
+  background-color: rgb(202, 202, 202);
+  font-size: larger;
+  box-shadow: 0 0.1em 0.1em 0.1em rgb(122, 122, 122);
+}
+
+.categories > a:hover {
+  border: 1px dotted orange;
+}
+.categories > a:link {
+  margin:auto;
+  width:65%;
+  color: rgb(44, 44, 44);
+  padding: 0.2em;
+  background-color: rgb(202, 202, 202);
+  font-size: larger;
+  box-shadow: 0 0.1em 0.1em 0.1em rgb(122, 122, 122);
+  border-radius: 1em;
+}
+.headerLinks {
+  margin-top:auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px) {
+ 
+}
